@@ -7,7 +7,7 @@ print('simple tuple a', a)
 print('for loop values of a: ')
 for val in a:
     print(val, end=" ")
-print('\n')
+print('')
 
 # tuple can be created without paranthesis
 # this is called as tuple packing
@@ -52,5 +52,10 @@ print('a after reassigned', a)
 # create tuple from a list (or iterable)
 a = tuple( [1,2,3,4,5] )
 print( 'tuple( [1,2,3,4,5] )', tuple( [1,2,3,4,5] ) )
+
+# tuple comprehension
+a = (x for x in range(10) if x % 2 == 0) # returns generator object
+print('a tuple set comprehension', a)
+
 
 # benefits of tuple over list : https://www.programiz.com/python-programming/tuple

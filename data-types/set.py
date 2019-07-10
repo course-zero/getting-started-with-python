@@ -14,7 +14,7 @@ a = {1,2,3,4,4,5}
 print('duplicate elements set', a)
 
 # a set, unlike tuple, must not contain mutable elements
-# a = {1,2,[3,4]} # TypeError: unhashable type: 'list'
+# a = {1,2,[3,4]} # TypeError: unhashable type: 'list' ==> https://stackoverflow.com/questions/14535730/what-does-hashable-mean-in-python
 # a = {1,2,(1,2,[3,4])} # error if tuple contains nested mutable elements
 # a = {1,2,{3,3,4}} # error as a set is mutable
 
@@ -122,5 +122,32 @@ print('is_b_superset_of_a', is_b_superset_of_a)
 
 #####################################################
 
-# other important methods
+# python set implements iterable interface
+a = {1,2,3,4,5}
+print("for loop on set a =>", end=" ")
+for val in a:
+    print(val, end=" ")
+print("")
+
+# check if item exists in a set
+a  = {1,2,3}
+print('2 in a', 2 in a)
+print('4 not in a', 4 not in a)
+
+# set comprehension
+a = {x for x in range(10) if x % 2 == 0}
+print('a from set comprehension', a)
+
+#####################################################
+
+# a fronzenset is immutable set. Like tuple is immutable list, a frozenset is immutable set.
+# but a frozenset provides API to interate theough its elements
+a = frozenset([1,2,4,3,4,1]) # from a list
+b = frozenset({5,66,5,8,66}) # from a set # any iterable works
+print('frozenset a and b', a, b)
+
+# methods
+# all methods except add or update as they will try to change the set
+
+# other built-in important methods
 # https://www.programiz.com/python-programming/methods/set

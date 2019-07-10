@@ -41,6 +41,11 @@ class MyItr:
             self.current = self.current + 1
             return returnVal
 
+myItr5 = MyItr(5)
 
-print( 'list(MyItr(5))', list(MyItr(5)) )
+print( 'iterator: list(myItr5)', list(myItr5) )
+print('iterator: 4 in myItr5', 4 in myItr5)
+
+
+
 # you cam also use for loop
