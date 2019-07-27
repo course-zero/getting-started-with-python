@@ -53,6 +53,12 @@ print('a after reassigned', a)
 a = tuple( [1,2,3,4,5] )
 print( 'tuple( [1,2,3,4,5] )', tuple( [1,2,3,4,5] ) )
 
+# merge two tuples using + operator
+a = (1,2,3)
+b = (4,5,6)
+c = a + b
+print('a + b tuples', c)
+
 # tuple comprehension
 a = (x for x in range(10) if x % 2 == 0) # returns generator object
 print('a tuple set comprehension', a)

@@ -73,6 +73,12 @@ b = (3, 4)
 a.extend(b) # no return value
 print('a after (a.extend( tuple )) =', a)
 
+# merge two lists using + operator
+a = [1,2,3]
+b = [3,4,5]
+c = a + b
+print('a + b lists', c)
+
 # insert a value at an index and pushes remaining value to the right
 # if index is greater than list length, adds new value at the end
 a = [1, 2, 4, 5]

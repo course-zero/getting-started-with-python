@@ -31,6 +31,9 @@ print( "%d * %d = %d" %( a, b, (a * b) ) )
 # format using string (read more in string data type)
 print("{} * {} = {}".format( a, b, a * b ))
 
+# formating using indexs
+print("{2}, {1} and {0}".format("mango", "bananas", "apple"))
+
 ################################
 
 # equality check

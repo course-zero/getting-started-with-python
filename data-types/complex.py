@@ -3,6 +3,10 @@
 a = 1 + 2j
 print(a)
 
+# coplex number without a real part
+a = 2.5j
+print('imaginary only complex a', a)
+
 # convert complex number from a string
 a = complex('1+2j') # do not add spaces
 print(a)

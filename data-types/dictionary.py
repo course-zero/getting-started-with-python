@@ -60,9 +60,9 @@ print('adding new element a', a)
 # remove an element
 a = {1: 'One', 2: 'Two', 3: 'three', 4: 'Four'}
 del a[1] # KeyError if key is missing
-popped = a.pop(2) # KeyError if key is missing
+popped = a.pop(2) # returns value, KeyError if key is missing
 
-print('after remove a', a, ' and popped', popped)
+print('after pop(2) a', a, ' and popped', popped)
 
 # pop a random element
 a = {1: 'One', 2: 'Two', 3: 'three', 4: 'Four'}
@@ -94,6 +94,10 @@ b = {1: 'One', 4: 'Four'}
 a.update(b) # update a with b, override keys
 print('after update() a', a, 'and b', b)
 
+# merge two dictionies using + does not work
+a = {1: 'Ten', 2: 'Two'}
+b = {1: 'One', 4: 'Four'}
+# c = a + b
 
 # create a dictionary from keys, static method
 interable = {1,2,3} # a set

@@ -6,7 +6,7 @@ print(a)
 a = False
 print(a)
 
-# conver to boolean
+# convert to boolean
 print("bool(0) =", bool(0))
 print("bool(1) =", bool(1))
 print("bool(2) =", bool(2))

@@ -49,6 +49,11 @@ a = {1,2,3}
 a.update([4,5],(6,7,7),{8,9},"GAMMA") # single level only
 print('after update() =>', a)
 
+# merge two dictionaries using + operator does not work
+a = {1,2,3}
+b = {3,4,5}
+# c = a + b # TypeError: unsupported operand type(s) for +: 'set' and 'set'
+
 # remove element from a set
 a = {1,2,3,4,5}
 a.discard(1) # one argument, non iterable
