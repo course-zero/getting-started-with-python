@@ -23,6 +23,7 @@ def printGreeting( userName ):
 printGreeting( "John Doe" )
 
 # python function can return values
+# any code after return statement is ignored without warning or error
 def sumTwoNumbers( num1, num2 ):
     return num1 + num2
 
@@ -38,3 +39,9 @@ def squareOfSum( num1, num2 ):
     return squareResult
 
 print( "squareOfSum(2, 3) => ", squareOfSum(2, 3) )
+
+# we can also define function in one line
+# you can use multiple statements separated by `;`
+def squareMe( num ): return num * num
+
+print( "squareMe(2) => ", squareMe(2) )
