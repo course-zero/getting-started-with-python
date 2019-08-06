@@ -122,3 +122,12 @@ def myFuncG():
     print("myFuncG-scope: color, taste, mood => => {}, {}, {}".format( color, taste, mood ))
 
 myFuncG()
+
+# like JavaScript, python hoists variables in a function scope without assiging any alue
+# hence below example would fail
+originalValue = 2
+def myFuncH():
+    originalValue = originalValue * 2 # multiply global value by 2 and create local variable
+    print( "myFuncH-scope: originalValue => ", originalValue )
+
+myFuncH() # UnboundLocalError: local variable 'originalValue' referenced before assignment

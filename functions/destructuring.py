@@ -1,0 +1,1 @@
+# https://riptutorial.com/python/example/14981/destructuring-assignment

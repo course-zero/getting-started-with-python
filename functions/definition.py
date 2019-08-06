@@ -45,3 +45,8 @@ print( "squareOfSum(2, 3) => ", squareOfSum(2, 3) )
 def squareMe( num ): return num * num
 
 print( "squareMe(2) => ", squareMe(2) )
+
+# pass is used as a placeholder for function body
+def toDoFunction():
+    pass
+toDoFunction()
