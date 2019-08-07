@@ -25,6 +25,7 @@ def myFuncC( firstName, lastName, gender = 'Male' ):
 
 myFuncC( "John", "Doe" )
 
+
 # python function can accept arbitrary length of arguments
 # Python packs all arguments in a tuple
 def myFuncD( *args ):
