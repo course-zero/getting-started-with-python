@@ -1,5 +1,8 @@
 # this is a comment
 
+# python editor
+# https://repl.it/languages/python3
+
 '''
 This is not a
 multi line comment (also tripple double-quotes).
@@ -49,6 +52,3 @@ a, b = 1, 2
 c = a + \
     b
 print( "c =", c )
-
-# python editor
-# https://repl.it/languages/python3
