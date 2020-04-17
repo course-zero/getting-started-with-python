@@ -1,0 +1,11 @@
+## Data Types
+- [Basics](basics.md)
+- [Boolean](boolean.md)
+- [Number](number.md)
+- [Complex Numbers](complex.md)
+- [String](string.md)
+- [List](list.md)
+- [Tuple](tuple.md)
+- [Set](set.md)
+- [Dictionary](dictionary.md)
+- [Destructuring](destructuring.md)

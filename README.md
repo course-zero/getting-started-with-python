@@ -1,2 +1,3 @@
-# getting-started-with-python
-Getting started guide for Python 3.
+# Python Getting Started Examples
+- [Basics](basics)
+- [Data Types](data-types)
