@@ -16,8 +16,8 @@ print('a = b = c = 1 => ', a, b, c)
 
 # delete a variable (del removes the binding from the variable and it will be garbage collected: https://stackoverflow.com/questions/21053380/what-does-del-do-exactly)
 b = 1
-#del b
-#print(b)
+del b
+print(b)
 
 # convention
 # you can use camelCase for a variable

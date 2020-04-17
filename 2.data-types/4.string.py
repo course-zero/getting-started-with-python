@@ -16,7 +16,7 @@ print('"Hello\\nWorld" =', a)
 
 # raw string
 a = r"Hello\nWorld"
-print('r"Hello\nWorld" =', a)
+print('r"Hello\\nWorld" =', a)
 
 # escape \ character
 a = "Hello\\nWorld"
@@ -73,8 +73,8 @@ print("a[:6] + a[6:] =", a)
 
 # string is read only list
 a = "Hello World"
-#a[0] = "B"
-#print(a)
+a[0] = "B"
+print(a)
 
 # length of a string
 a = "Hello World"
