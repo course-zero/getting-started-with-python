@@ -57,7 +57,7 @@ print( "a * b =", a * b )
 # => a * b = 8
 ```
 
-### formatting options
+### Formatting options
 https://docs.python.org/3/tutorial/inputoutput.html
 
 #### Old way
