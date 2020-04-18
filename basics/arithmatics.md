@@ -83,7 +83,7 @@ print('a == b', a == b)
 # => a == b True
 ```
 
-## Check if two values are not the same
+#### Check if two values are not the same
 ```py
 a = 1
 b = 2
