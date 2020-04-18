@@ -6,7 +6,7 @@
 # https://repl.it/languages/python3
 ```
 
-#### Not a comment
+### Not a comment
 ```py
 '''
 This is not a
@@ -57,14 +57,20 @@ print( "a * b =", a * b )
 # => a * b = 8
 ```
 
-#### formatting options
+### formatting options
 https://docs.python.org/3/tutorial/inputoutput.html
 
+#### Old way
 ```py
 print( "%d * %d = %d" %( a, b, (a * b) ) )
 # => 4 * 2 = 8
+```
 
-# using `str.format` method (https://docs.python.org/3/library/string.html#format-string-syntax)
+
+#### New way (_using `str.format()`_)
+https://docs.python.org/3/library/string.html#format-string-syntax
+
+```
 # sequential order
 print("{} * {} = {}".format( a, b, a * b ))
 # => 4 * 2 = 8
@@ -81,8 +87,10 @@ print("{food}, {1} and {0}".format("Italy", "Mercedes", food="Pizza"))
 a, b = 4, 2
 print( "a * b = {:10.2f}".format( a * b ) )
 # => a * b =       8.00
-
 ```
+
+> https://pyformat.info/
+
 
 ## Multi-line code
 The `\` character is used to put sequential code on the next line.
