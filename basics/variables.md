@@ -50,7 +50,7 @@ print(a)
 # => 1
 ```
 
-## :bulb: convention
+## :bulb: Convention
 - Generally use lowercase ASCII letters.
 - You can use **camelCase** or **snake_case** syntax.
 - Use `ALL_UPPERCASE` letters for global constants (_fixed values_).
