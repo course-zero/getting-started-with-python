@@ -6,62 +6,82 @@
 # https://repl.it/languages/python3
 ```
 
+## Not a comment
 ```py
 '''
 This is not a
 multi line comment (also tripple double-quotes).
-This is still compiled by the interpreter
-but does nothing.
-https://www.python.org/dev/peps/pep-0257/#multi-line-docstrings
+This is still compiled by the interpreter.
+But unless assigned to a variable, it is immediately garbage collected.
+https://www.codecademy.com/forum_questions/505ba3cfc6addb000200e33c
 '''
 ```
 
 ## `print` function
 
 ```py
+# https://docs.python.org/3/library/functions.html#print
 print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
 ```
 
-Print objects to the text stream file, separated by sep and followed by end. `sep`, `end`, `file` and `flush`, if present, must be given as keyword arguments.
-
-https://docs.python.org/3/library/functions.html#print
+The `print` function prints the objects received as arguments to a stream (_like STDOUT_). They can be separated by a string (_sep_) and ended with a string (_end_). The `sep`, `end`, `file` and `flush`, if present, must be given as keyword arguments.
 
 
 ```py
+
+# single argument
 print(123)
 # => 123
-
 print("Hello World!")
 # Hello World!
 
+# multiple arguments
 print("Hello", "World!")
 # => Hello World!
 
+# custom separator
 print("Hello", "World!", sep=" - ")
 # => Hello - World!
 
+# operations
+print(1 == 1)
+# => True
+print( 1 != 1 )
+# => False
 print( 4 * 2 )
 # => 8
 
+# variables
 a, b = 4, 2
 print( "a * b =", a * b )
 # => a * b = 8
+```
 
-# https://docs.python.org/3/tutorial/inputoutput.html
+#### formatting options
+https://docs.python.org/3/tutorial/inputoutput.html
+
+```py
 print( "%d * %d = %d" %( a, b, (a * b) ) )
 # => 4 * 2 = 8
 
+# using `str.format` method (https://docs.python.org/3/library/string.html#format-string-syntax)
+# sequential order
 print("{} * {} = {}".format( a, b, a * b ))
 # => 4 * 2 = 8
 
-print("{2}, {1} and {0}".format("mango", "bananas", "apple"))
-# => apple, bananas and mango
+# indexed values
+print("{2}, {1} and {0}".format("Italy", "Mercedes", "Pizza"))
+# => Pizza, Mercedes and Italy
 
-print(1 == 1)
-# => True
+# named values (all or mixed values)
+print("{food}, {1} and {0}".format("Italy", "Mercedes", food="Pizza"))
+# => Pizza, Mercedes and Italy
 
-print( 1 != 1 )
-# => False
+# width and precision
+a, b = 4, 2
+print( "a * b = {:10.2f}".format( a * b ) )
+# => a * b =       8.00
+
 ```
 
 ## Multi-line code
