@@ -1,6 +1,6 @@
-- In Python, a variable is just a label assigned to a memory that contains a value.
-- A variable points to the value of any data type.
-- A value not pointed by a variable is garbage collected.
+- In Python, a variable is just a **label** assigned to a memory that contains a value.
+- A variable can point to the value of any data type.
+- A value not assigned to a variable (_label_) is garbage collected.
 
 ## Declare a variable
 ```py
@@ -35,19 +35,25 @@ print('a = b = c = 1 => ', a, b, c)
 # => a = b = c = 1 =>  1 1 1
 ```
 
-## delete a variable
+## Delete a variable
 - The `del` keyword removes the binding between variable name and the value by removing the variable (_label_).
-- The value will be garbage collected.
+- The value will be garbage collected unless pointed by another vaiable.
 
 > https://stackoverflow.com/questions/21053380/what-does-del-do-exactly)
 
 ```py
-b = 1
+a = b = 1
 del b
 print(b)
 # => NameError: name 'b' is not defined
+print(a)
+# => 1
 ```
 
 ## :bulb: convention
-- You can use camelCase for a variable.
+- Generally use lowercase ASCII letters.
+- You can use **camelCase** or **snake_case** syntax.
+- Use `ALL_UPPERCASE` letters for global constants (_fixed values_).
+  - Constants do not exist in Python -> https://stackoverflow.com/a/2682752/2790983
+- Use `_` prefix for `_private` or `_INTERNAL` variables and constants.
 - Do not start a variable with a digit.
