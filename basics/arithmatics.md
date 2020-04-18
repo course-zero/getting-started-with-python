@@ -97,4 +97,4 @@ print( 'a is not b', a is not b ) # a is b
 ```
 
 ## :bulb: order of execution
-() => +x => -x => ** => * => / => % => + => -
+`()` => `+x` => `-x` => `**` => `*` => `/` => `%` => `+` => `-`
