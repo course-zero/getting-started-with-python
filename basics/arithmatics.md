@@ -1,4 +1,4 @@
-## addition
+## Addition
 
 ```py
 a, b = 4, 2
@@ -8,7 +8,7 @@ print(c)
 ```
 
 
-## substraction
+## Substraction
 ```py
 a, b = 4, 2
 c = a - b
@@ -17,7 +17,7 @@ print(c)
 ```
 
 
-## multiplication
+## Multiplication
 ```py
 a, b = 4, 2
 c = a * b
@@ -26,7 +26,9 @@ print(c)
 ```
 
 
-## division (float)
+## Division
+
+#### Get float result
 ```py
 a, b = 4, 2
 c = a / b
@@ -34,8 +36,7 @@ print(c)
 # => 2.0
 ```
 
-
-## division (integer)
+#### Get integer result
 ```py
 a, b = 4, 2
 c = a // b
@@ -44,7 +45,7 @@ print(c)
 ```
 
 
-## power
+## Power
 ```py
 a, b = 4, 2
 c = a ** b # a to the power of b (4^2)
@@ -53,7 +54,7 @@ print(c)
 ```
 
 
-## reminder
+## Reminder
 ```py
 a, b = 4, 2
 c = a % b
@@ -62,7 +63,7 @@ print(c)
 ```
 
 
-## sign change
+## Sign change
 ```py
 a, b = 4, 2
 c = -a
@@ -71,7 +72,9 @@ print(c)
 ```
 
 
-## compare values
+## Compare values
+
+#### Check if two values are the same
 ```py
 a, b = 4, 2
 a = 1
@@ -80,9 +83,18 @@ print('a == b', a == b)
 # => a == b True
 ```
 
+## Check if two values are not the same
+```py
+a = 1
+b = 2
+print( 'a != b', a != b )
+# => a != b True
+```
 
-## compare object ids (memory locations)
 
+## Compare object ids (_memory locations_)
+
+#### If two variables point to the same value
 ```py
 a = 1
 b = c = 2
@@ -93,17 +105,7 @@ print('b is c', b is c)
 ```
 > This operation is same as `id(a) == id(b)` (https://docs.python.org/3/library/functions.html#id)
 
-
-## not equal value check
-```py
-a = 1
-b = 2
-print( 'a != b', a != b )
-# => a != b True
-```
-
-
-## not equal object check
+#### If two variables point to the different values
 ```py
 a = 1
 b = 1
