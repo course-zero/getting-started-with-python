@@ -70,7 +70,7 @@ myFuncE( 'John Doe', "Male", 60, 80 )
 def myFuncF( name, *score, gender ):
     print( "myFuncF() name, gender, totalScore => ", name, gender, sum(score) )
 
-# myFuncF( 'John Doe', 60, 80, gender ) TypeError: myFuncF() missing 1 required keyword-only argument: 'gender'
+# myFuncF( 'John Doe', 60, 80 ) TypeError: myFuncF() missing 1 required keyword-only argument: 'gender'
 myFuncF( 'John Doe', 60, 80, gender = "Male" )
 # => myFuncF() name, gender, totalScore =>  John Doe Male 140
 ```
