@@ -1,7 +1,9 @@
+## Variables and Arguments scope
+- All variables declared inside the function body have scope of that function.
+- They do not pollute outside scope.
+- Arguments also live in function's scope.
+
 ```py
-# all variables declared inside has scope of that function
-# it does not pollute outside scope
-# arguments are also live in function's scope
 def myFuncA( num ):
     result = num ** num
     return result
@@ -12,8 +14,8 @@ print( "myFuncA(3) => ", myFuncA( 3 ) )
 # print( result ) # NameError: name 'result' is not defined
 ```
 
+## Lexical scope
 ```py
-# variables in python are lexically scoped
 firstName = "John"
 def myFuncB( lastName ):
     print("myFuncB: firstName, lastName => ", firstName, lastName )
@@ -31,9 +33,11 @@ myFuncB( "Doe" )
 # => myInnerFuncB: firstName, lastName, age, gender, email =>  John Doe 26 Male john@email.net
 ```
 
+## Overriding variables
+- You can not override variable from the outer scope.
+- It always create new variable in the function scope.
+
 ```py
-# python can not override variable from the outer scope
-# it always create new variable in function scope
 firstName = "John"
 def myFuncC( lastName ):
     firstName = "Mike"
@@ -63,10 +67,11 @@ print( "global-scope: firstName => ", firstName )
 # => global-scope: firstName =>  John
 ```
 
+## Use of the `global` keyword
+- Variables defined on file level scope are called as **global** variables.
+- variables defined inside the function body are called as **local** variables.
+- To override a global variable, we need to tell Python it is a global variable using `global` keyword.
 ```py
-# variables defined on file level scope are called as `global` variables
-# variables defined inside a function are called as `local` variables
-# to override a global variable, we need to tell python, it is a global variable using `global` keyword
 fruit = "Mango"
 drink = "Vanilla Shake"
 def myFuncD():
@@ -80,14 +85,16 @@ def myFuncD():
 
 myFuncD()
 print("global-scope: fruit => ", fruit)
+print("global-scope: drink => ", drink)
+
 
 # => myFuncD-scope: fruit =>  Apple
 # => myFuncD-scope: drink =>  Virgin Mojito
 # => global-scope: fruit =>  Apple
-```
+# => global-scope: fruit =>  Vanilla Shake
 
-```py
-# if a global variable is not defined, using `global` variable, it can be created
+
+# If a global variable is not defined, using `global` variable, it can be created.
 def myFuncE():
     global car # define fruit as global, but doesn't create one
     
@@ -100,10 +107,8 @@ print("global-scope: car => ", car)
 
 # => myFuncE-scope: car =>  Mercedes
 # => global-scope: car =>  Mercedes
-```
 
-```py
-# inner python function can also use `global` keyword
+# Inner python function can also use `global` keyword
 def myFuncF():
     country = "India" # creates a local variable
 
@@ -125,13 +130,14 @@ print("global-scope: country => ", country)
 # => global-scope: country =>  Denmark
 ```
 
+## Use of `nolocal` keyword
+- A new variable is always created inside an inner function if we assign a value to a variable even if the same variable is passed to the inner fuction lexically.
+- The `global` keyword is only useful to use variables from global scope.
+- To override variable from lexical scope, we need to use `nolocal` keyword.
+- However, unlike `global` keyword, `nolocal` does not create a variable in any of the outer scopes.
+- The `nonlocal` does not work for variables coming from global scope, have to use `global` keyword.
+
 ```py
-# since a new variable is always created inside an inner function
-# when we assign a value to a variable if it is coming from lexical scope
-# `global` is useful to use variables from global scope
-# to use variable from lexical scope, we need to use `nolocal` keyword
-# warning: unline `global` keyword, `nolocal` does not create a variable in any of the outer scopes
-# warning: nonlocal does not work for variables coming from global scope, have to use `global`
 def myFuncG():
     color = 'red'
     taste = 'sweet'
@@ -164,9 +170,10 @@ myFuncG()
 # => myFuncG-scope: color, taste, mood => => green, sweet, sad
 ```
 
+## Hoisting
 ```py
-# like JavaScript, python hoists variables in a function scope without assiging any alue
-# hence below example would fail
+# Like JavaScript, functions and variables are hoisted in Python.
+# However, hoisted variable are not assigned with an initial value.
 originalValue = 2
 def myFuncH():
     originalValue = originalValue * 2 # multiply global value by 2 and create local variable
