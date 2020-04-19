@@ -1,7 +1,9 @@
-```py
-# python function is defined using `def` keyword
-# function name follows the same rule of variable defintion (https://www.programiz.com/python-programming/keywords-identifier#rules)
+## Function Definiton
+- Python function is defined using `def` keyword.
+- function name follows the same rule of variable defintion (https://www.programiz.com/python-programming/keywords-identifier#rules)
 
+
+```py
 def helloFunction():
     print( "helloFunction() => ", "Hello World" )
 
@@ -10,22 +12,22 @@ helloFunction()
 # => helloFunction() =>  Hello World
 ```
 
+## Python functions can have optional **docstring**
 ```py
-# python function can have optional docstring
 def docFunction():
     """
-    This is a documentation line for docFunction.
+    This is a documentation line for the docFunction.
     This can help user understand what the function does.
     """
     print( "docFunction() => ", "I am important!" )
 
 print( docFunction.__doc__ )
-# =>    This is a documentation line for docFunction.
+# =>    This is a documentation line for the docFunction.
 # =>    This can help user understand what the function does.
 ```
 
+## Python function can take arguments
 ```py
-# python function can take arguments
 def printGreeting( userName ):
     print( "printGreeting() => ", "Hello {}!".format( userName ) )
 
@@ -33,9 +35,9 @@ printGreeting( "John Doe" )
 # => printGreeting() =>  Hello John Doe!
 ```
 
+## Python function can return values
 ```py
-# python function can return values
-# any code after return statement is ignored without warning or error
+# any code after return statement is ignored without warning or an error
 def sumTwoNumbers( num1, num2 ):
     return num1 + num2
 
@@ -43,8 +45,8 @@ print( "sumTwoNumbers(11, 22) => ", sumTwoNumbers(11, 22) )
 # => sumTwoNumbers(11, 22) =>  33
 ```
 
+## Nesting functions
 ```py
-# python function can nest another function
 def squareOfSum( num1, num2 ):
     def squareNum( input ):
         return input * input
@@ -57,8 +59,8 @@ print( "squareOfSum(2, 3) => ", squareOfSum(2, 3) )
 # => squareOfSum(2, 3) =>  25
 ```
 
+## Defining function in one line
 ```py
-# we can also define function in one line
 # you can use multiple statements separated by `;`
 def squareMe( num ): return num * num
 
@@ -66,8 +68,8 @@ print( "squareMe(2) => ", squareMe(2) )
 # => squareMe(2) =>  4
 ```
 
+## Use of `pass` keyword
 ```py
-# pass is used as a placeholder for function body
 def toDoFunction():
     pass
 toDoFunction()
