@@ -116,7 +116,6 @@ print( 'a is not b', a is not b ) # a is b
 ## :bulb: Unsupported operations in Python
 - `x++` and `x--`
 - `++x` and `--x`
-- `x += 1` or `x <operator>= <value>` 
 
 
 ## :bulb: Order of the execution
